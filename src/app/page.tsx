@@ -28,11 +28,13 @@
 // export default Page;
 
 
-
+"use client"
 import {BlogPostsPreview} from "@/components/BlogPostPreview";
 import {BlogPostsPagination} from "@/components/BlogPostsPagination";
+import ContactForm from "@/components/ContactForm";
 import {Footer} from "@/components/Footer";
 import {Header} from "@/components/Header";
+import ServicesSection from "@/components/Services";
 import {wisp} from "@/lib/wisp";
 import Image from 'next/image';
 
@@ -45,7 +47,7 @@ const Page = async ({
   const result = await wisp.getPosts({limit: 6, page});
 
   return (
-    <div className="container mx-auto px-5 mb-10 border">
+    <div className="mx-auto px-5 mb-10 border">
       <Header />
 
       {/* Hero Section */}
@@ -56,22 +58,16 @@ const Page = async ({
             alt="Furniture Display"
             layout="fill"
             objectFit="cover"
-            quality={100}
-            className="opacity-80"
+            // quality={100}
+            // className="opacity-80"
           />
         </div>
 
-        {/* <div className="relative z-10 max-w-lg p-10 bg-white bg-opacity-90">
-          <h1 className="text-6xl font-bold text-gray-900 mb-4">SALE</h1>
-          <p className="text-xl text-gray-700 mb-6">
-            Incredible deals. Top-of-the-line design for less.
-          </p>
-          <button className="px-6 py-3 bg-black text-white font-semibold rounded-md hover:bg-gray-800 transition">
-            See our big sale
-          </button>
-        </div> */}
-      </div>
+        
 
+      </div>
+      <ServicesSection />
+      <ContactForm/>
       <Footer />
     </div>
   );
