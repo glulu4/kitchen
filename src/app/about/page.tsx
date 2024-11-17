@@ -47,11 +47,11 @@ export async function generateMetadata() {
 const Page = async () => {
   return (
     <div className="container mx-auto px-5">
-      <Header />
+      {/* <Header /> */}
       <div className="prose lg:prose-lg dark:prose-invert m-auto mt-20 mb-10 blog-content">
         <Markdown>{content}</Markdown>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
