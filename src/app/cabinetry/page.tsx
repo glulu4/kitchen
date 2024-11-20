@@ -21,6 +21,7 @@ const Page = () => {
             <div className="grid gap-6 justify-items-center  grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))]">
                 {cabinets.map((cabinet:CabinetInfo, index) => (
                     <Tile
+                        key={index}
                         text={cabinet.title}
                         subtext={cabinet.subtitle}
                         imagePath={cabinet.imagePath}
