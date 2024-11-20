@@ -33,10 +33,8 @@ const Page = async ({
                 </div>
 
                 <ImageGallery />
-                {/* Hero Section */}
-                
-
-                <Footer />
+            
+                {/* <Footer /> */}
             </div>
 
         </>

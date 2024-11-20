@@ -19,7 +19,7 @@ interface MenuItem {
   openInNewTab?: boolean;
 }
 const menuItems: MenuItem[] = [
-  { name: "Blog", href: "/" },
+  { name: "Home", href: "/" },
   {name: "Projects", href: "/projects"},
 
   { name: "About", href: "/about" },
@@ -87,16 +87,14 @@ export const Header: FunctionComponent = () => {
   return (
     <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
       <Link href="/">
-      <Image
-        src="/images/header.png"
-          alt="Furniture Display"
-          // layout="fill"
-          objectFit="contain"
-          width={200}
-          height={100}
-          className="object-contain"
-
-      />
+        <Image
+            src="/images/header.png"
+            alt="Furniture Display"
+            objectFit="contain"
+            width={200}
+            height={100}
+            className="object-contain"
+        />
         {/* <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
           {config.blog.name}
         </h1> */}

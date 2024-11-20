@@ -6,9 +6,10 @@ interface TileProps {
     text: string;
     imagePath: string;
     onClick: () => void;
+    subtext:string;
 }
 
-export default function Tile({text, imagePath, onClick}: TileProps) {
+export default function Tile({text, imagePath, onClick, subtext}: TileProps) {
     return (
 
 
@@ -19,13 +20,16 @@ export default function Tile({text, imagePath, onClick}: TileProps) {
                     <Image
                         alt="modern kitchens miami"
                         className="object-cover"
-                        src={imagePath || "/images/placeholder.webp"}
+                        src={imagePath}
                         fill
                     />
                 </div>
 
                 <div className="p-5">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{text}</h5>
+                </div>
+                <div className="p-5">
+                    <h6 className="mb-2 text-xl font-bold tracking-tight text-gray-700 dark:text-white">{subtext}</h6>
                 </div>
             </Link>
         </div>
