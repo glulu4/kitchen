@@ -1,13 +1,8 @@
 
 
 "use client"
-import ContactForm from "@/components/ContactForm";
-import {Footer} from "@/components/Footer";
-import {Header} from "@/components/Header";
-import ServicesSection from "@/components/Services";
+
 import {ServiceTiles} from "@/components/ServiceTiles";
-import {wisp} from "@/lib/wisp";
-import Image from 'next/image';
 
 const Page = async ({
     searchParams,
@@ -15,11 +10,28 @@ const Page = async ({
     searchParams: {[key: string]: string | string[] | undefined};
 }) => {
     const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
-    const result = await wisp.getPosts({limit: 6, page});
 
     return (
         <div className="mx-auto mb-10 border">
+            {/* Header section with background */}
+            <div
+                className="bg-cover bg-center flex items-center justify-center h-80 md:h-96"
+                style={{
+                    backgroundImage: "url(https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80)",
+                }}
+            >
 
+                <div className="flex flex-col gap-8 bg-opacity-90 bg-white w-3/4 md:w-2/3 text-left py-10 border-b-2 border-black mt-80 p-10 rounded-sm">
+                    <h1 className="text-6xl md:text-4xl sm:text-3xl font-bold text-black">Services</h1>
+                    <p className="text-gray-700 text-xl sm:text-lg leading-10">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, architecto perspiciatis soluta est eveniet aperiam, eius vero accusantium, sint voluptates totam. Libero autem nulla ab repellat nihil nesciunt. Fugiat, quasi?
+                        You may choose to highlight other things like courses or programs, or
+                        to share special features about your business that you want to
+                        promote. Double click on the text box to edit the text and make it
+                        your own.
+                    </p>
+                </div>
+            </div>
             <ServiceTiles/>
 
             {/* Hero Section */}

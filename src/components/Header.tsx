@@ -27,7 +27,7 @@ const menuItems: MenuItem[] = [
   {name: "Services", href: "/services"},
   {name: "Cabinetry", href: "/cabinetry"},
   {name: "Counter Tops", href: "/counter-tops"},
-  {name: "Brands", href: "/brands"},
+  // {name: "Brands", href: "/brands"},
   // {name: "Products", href: "/products"},
 
 

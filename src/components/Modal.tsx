@@ -39,21 +39,21 @@ export default function Modal({
                         leaveFrom="opacity-100 scale-100"
                         leaveTo="opacity-0 scale-95"
                     >
-                        <Dialog.Panel className="fixed inset-0 grid grid-cols-2 bg-white">
+                        <Dialog.Panel className="fixed inset-0 grid grid-cols-2 bg-zinc-100">
                             {/* Left Section: Image */}
                             <div className="relative flex items-center justify-center">
                                 <img
                                     src={imagePath}
-                                    alt="Modal Image"
-                                    className="object-fit h-2/3 w-2/3"
+                                    alt="modern kitchens miami"
+                                    className="object-contain h-2/3 w-2/3"
                                 />
                                 {/* Navigation Controls */}
-                                <button className="absolute left-4 top-1/2 transform -translate-y-1/2 text-3xl text-white">
+                                {/* <button className="absolute left-4 top-1/2 transform -translate-y-1/2 text-3xl text-white">
                                     &#8249;
-                                </button>
-                                <button className="absolute right-4 top-1/2 transform -translate-y-1/2 text-3xl text-white">
+                                </button> */}
+                                {/* <button className="absolute right-4 top-1/2 transform -translate-y-1/2 text-3xl text-white">
                                     &#8250;
-                                </button>
+                                </button> */}
                             </div>
 
                             {/* Right Section: Content */}

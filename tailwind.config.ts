@@ -19,6 +19,12 @@ const config = {
       // },
     },
     extend: {
+                  maxHeight: {
+                '96': '24rem', // Default `max-h-96` value
+                '112': '28rem',
+                '128': '32rem', // Custom value
+                'custom': '75vh', // Another example (75% of viewport height)
+            },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

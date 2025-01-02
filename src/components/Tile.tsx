@@ -13,7 +13,7 @@ export default function Tile({text, imagePath, onClick, subtext}: TileProps) {
     return (
 
 
-        <div className="w-full max-w-96 max-h-90 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        <div className="w-full max-w-96 rounded-sm max-h-90 bg-white borderrounded-lg shadow dark:bg-gray-800"
         onClick={onClick}>
             <Link href="#">
                 <div className="aspect-[16/9] relative">

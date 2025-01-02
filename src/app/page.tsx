@@ -2,8 +2,6 @@
 
 "use client"
 import ContactForm from "@/components/ContactForm";
-import {Footer} from "@/components/Footer";
-import {Header} from "@/components/Header";
 import ServicesSection from "@/components/Services";
 import {wisp} from "@/lib/wisp";
 import Image from 'next/image';
@@ -32,9 +30,12 @@ const Page = async ({
           />
         </div>
       </div>
-      <div className="p-8">
+      <div className="pt-36 m-4">
         <ServicesSection />
-        <ContactForm />
+        <div className="pt-36">
+          <ContactForm />
+
+        </div>
       </div>
 
     </div>
