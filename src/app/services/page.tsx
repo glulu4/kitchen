@@ -34,25 +34,7 @@ const Page = async ({
             </div>
             <ServiceTiles/>
 
-            {/* Hero Section */}
-            {/* <div className="relative flex flex-col items-center justify-center h-[80vh] bg-gray-100 text-center pb-10">
-                <div className="absolute inset-0 flex justify-center items-center  pb-10">
-                    <Image
-                        src="/images/kitchen.jpg" // Replace with your image path
-                        alt="Furniture Display"
-                        layout="fill"
-                        objectFit="cover"
-                    // quality={100}
-                    // className="opacity-80"
-                    />
-                </div>
-            </div>
-            <div className="p-8">
-                <ServicesSection />
-                <ContactForm />
-            </div> */}
 
-            {/* <Footer /> */}
         </div>
     );
 };

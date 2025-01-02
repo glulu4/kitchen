@@ -46,8 +46,6 @@ export const ServiceTiles = () => {
             <div className="max-w-6xl mx-auto pt-48 sm:pt-80">
                 {projects.map((project, index) => (
                     <div
-                        // key={project.id}
-                        // className="flex flex-col md:flex-row items-center justify-center md:items-center gap-4 mb-12 px-4 border-b-2 border-black pb-6"
                         key={project.id}
                         className={`flex flex-col md:flex-row items-center justify-center md:items-center gap-4 mb-12 pb-20 ${index % 2 === 0 ? "pl-28 pr-4" : "pl-4 pr-28"
                             }`}
@@ -57,7 +55,7 @@ export const ServiceTiles = () => {
                                 src={project.imageUrl}
                                 alt={project.title}
                                 className="w-full h-full object-cover rounded-lg"
-                                style={{maxHeight: '300px'}} // Set a consistent max height
+                                style={{maxHeight: '300px'}} 
                             />
                         </div>
                         <div className="flex-1 p-4  rounded-lg ">
