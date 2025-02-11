@@ -20,11 +20,11 @@ interface MenuItem {
 }
 const menuItems: MenuItem[] = [
   { name: "Home", href: "/" },
-  {name: "Projects", href: "/projects"},
+  // {name: "Projects", href: "/projects"},
 
   { name: "About", href: "/about" },
   {name: "Contact", href: "/contact"},
-  {name: "Services", href: "/services"},
+  // {name: "Services", href: "/services"},
   {name: "Cabinetry", href: "/cabinetry"},
   {name: "Counter Tops", href: "/counter-tops"},
   // {name: "Brands", href: "/brands"},
@@ -44,7 +44,7 @@ export const Navigation: FunctionComponent = () => {
               href={item.href}
               target={item.openInNewTab ? "_blank" : "_self"}
               className={cn(
-                "hover:text-gray-900 text-lg",
+                "hover:text-gray-900 text-2xl font-nokora",
                 pathname === item.href && "font-semibold"
               )}
             >
@@ -53,6 +53,7 @@ export const Navigation: FunctionComponent = () => {
           </div>
         ))}
       </div>
+
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger>
@@ -85,19 +86,19 @@ export const Navigation: FunctionComponent = () => {
 
 export const Header: FunctionComponent = () => {
   return (
-    <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
-      <Link href="/">
+    <section className="flex items-center justify-between mt-8 md:mt-16 mb-12 mx-6">
+      <Link href="/" className="relative flex items-center">
         <Image
             src="/images/header.png"
-            alt="Furniture Display"
+            alt="Modern kitchens miami"
             objectFit="contain"
             width={200}
             height={100}
             className="object-contain"
         />
-        {/* <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
-          {config.blog.name}
-        </h1> */}
+        <div className=" bg-red-500 text-white text-md font-bold px-3 py-1">
+          Nationwide
+        </div>
       </Link>
       <Navigation />
     </section>

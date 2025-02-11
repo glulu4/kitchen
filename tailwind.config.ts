@@ -81,6 +81,7 @@ const config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        nokora: ["var(--font-khmer)", ...fontFamily.serif],
       },
     },
   },

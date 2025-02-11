@@ -23,8 +23,8 @@ const ContactForm = () => {
     };
 
     return (
-        <div >
-            <h2 className="text-5xl font-bold text-left mb-6">Contact Us</h2>
+        <div className='mx-20'>
+            <h2 className="text-5xl font-bold text-left mb-12">Contact Us</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="flex gap-4">
                     <div className="flex-1">
@@ -37,7 +37,7 @@ const ContactForm = () => {
                             value={formData.firstName}
                             onChange={handleChange}
                             required
-                            className="w-full border-b border-gray-400 focus:outline-none focus:border-black"
+                            className="w-full border-b border-gray-400 bg-inherit focus:outline-none focus:border-black"
                         />
                     </div>
                     <div className="flex-1">
@@ -50,7 +50,7 @@ const ContactForm = () => {
                             value={formData.lastName}
                             onChange={handleChange}
                             required
-                            className="w-full border-b border-gray-400 focus:outline-none focus:border-black"
+                            className="w-full border-b border-gray-400 bg-inherit focus:outline-none focus:border-black"
                         />
                     </div>
                 </div>
@@ -64,7 +64,7 @@ const ContactForm = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full border-b border-gray-400 focus:outline-none focus:border-black"
+                        className="w-full border-b border-gray-400 focus:outline-none bg-inherit focus:border-black"
                     />
                 </div>
                 <div className="flex items-center">
