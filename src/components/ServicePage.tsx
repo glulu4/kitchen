@@ -48,7 +48,7 @@ const ServicePage = ({title, parapgraphHeader, paragraph1, paragraph2, imgSrc}: 
                     <div className="text-center lg:text-left">
                         <Image
                             src={imgSrc} // Replace with your actual image
-                            alt="Paragon Exterior Team"
+                            alt="Modern Kitchens Miami"
                             width={600}
                             height={400}
                             className="rounded-lg shadow-lg"

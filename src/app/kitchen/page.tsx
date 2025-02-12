@@ -11,21 +11,21 @@ const posts = [
         title: 'Transform Your Kitchen with a Stunning Remodel',
         description:
             'Upgrade your kitchen with a sleek, modern design that enhances both functionality and aesthetics. From custom cabinetry to high-end countertops, we bring your dream kitchen to life.',
-        imageUrl: "/images/modern-kitchen2.jpg",
+        imageUrl: "/images/modern-kitchen5.jpeg",
     },
     {
         id: 2,
         title: 'Custom Kitchen Cabinet Installation',
         description:
             'Give your kitchen a fresh new look with expertly crafted cabinets. Our team specializes in custom kitchen cabinetry that maximizes space, style, and storage.',
-        imageUrl: "/images/modern-kitchen3.jpg",
+        imageUrl: "/images/modern-kitchen1.png",
     },
     {
         id: 3,
         title: 'Increase Your Home’s Value with Kitchen Renovations',
         description:
             'A beautifully remodeled kitchen not only enhances your home’s appeal but also increases property value. Invest in a kitchen renovation that combines elegance and efficiency.',
-        imageUrl: "/images/modern-kitchen4.jpg",
+        imageUrl: "/images/modern-kitchen7.jpeg",
     },
 ];
 
@@ -39,7 +39,7 @@ export default function page() {
                 parapgraphHeader='Expert Kitchen Renovations'
                 paragraph1='Our expert kitchen remodeling services help transform your space into a modern, functional, and stylish kitchen. From new countertops to cabinet upgrades, we handle every detail of your renovation project.'
                 paragraph2='We specialize in kitchen renovations, including custom cabinetry, backsplash installation, and high-quality countertops. Whether you prefer a contemporary or traditional design, we bring your vision to life with expert craftsmanship.'
-                imgSrc="/images/modern-kitchen1.png"
+                imgSrc="/images/modern-kitchen6.png"
             />
 
             <ThreeImageLayout posts={posts} />

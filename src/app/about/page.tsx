@@ -1,59 +1,76 @@
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { config } from "@/config";
-import { signOgImageUrl } from "@/lib/og-image";
-import Markdown from "react-markdown";
+// "use client"
 
-const content = `# About Me
+// import Hero from "@/components/about/Hero";
+// import ContactForm from "@/components/ContactForm";
 
-![Samantha](https://imagedelivery.net/lLmNeOP7HXG0OqaG97wimw/clvlugru90000o4g8ahxp069s/db7abbe3-aa5c-433e-a16d-cbf137d1c9e5.png/public)
 
-Hey there! I'm Samantha, a 28-year-old former corporate warrior who decided to ditch the 9-to-5 grind and embark on an adventure of a lifetime. After years of hustling in a high-pressure job, I realized that life is too short to be stuck in an office, staring at spreadsheets all day.
 
-So I took a leap of faith, quit my cushy job in Singapore, and decided to see the world on my own terms. No more stuffy meetings or rigid schedules – just me, my backpack, and an open road ahead.
+// // AboutUs.jsx (main component)
+// export default function AboutUs() {
+//   const heroContent = {
+//     quote: "Amet amet eget scelerisque tellus sit neque faucibus non eleifend. Integer eu praesent at a. Ornare arcu gravida natoque erat et cursus tortor.",
+//     author: "Judith Rogers",
+//     role: "CEO at Workcation",
+//     companyLogo: "/api/placeholder/120/48",
+//     companyValues: "Company values",
+//     missionTitle: "On a mission to empower remote teams",
+//     description: [
+//       "Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.",
+//       "Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.",
+//       "Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci."
+//     ]
+//   };
 
-![Samantha](https://imagedelivery.net/lLmNeOP7HXG0OqaG97wimw/clvlugru90000o4g8ahxp069s/6b080e65-2329-4a36-ad5c-0a6af8d9aeb1.png/public)
 
-This blog is where I'll be documenting my travels, sharing my experiences, and hopefully inspiring others to follow their wanderlust. From trekking through remote villages to savoring local cuisines, I'm on a mission to immerse myself in different cultures and create memories that will last a lifetime.
 
-But this journey isn't just about checking off destinations from a bucket list. It's about self-discovery, personal growth, and finding the courage to live life on my own terms. I'll be honest and raw, sharing the highs and lows, the moments of pure bliss and the inevitable challenges that come with solo travel.
+//   return (
+//     <>
+//       <div className="py-24 sm:py-32">
+//         <div className="mx-auto w-5/6 px-6 lg:px-8">
+//           <Hero {...heroContent} />
+//           {/* <Stats stats={stats} /> */}
+//         </div>
+//       </div>
 
-So join me on this adventure, and let's explore the world together! Who knows, maybe my stories will inspire you to take that leap of faith and pursue your own dreams, whatever they may be.
 
-Let's go on an adventure!
+//       <div className="pt-36 w-5/6 flex flex-col mx-auto">
+//         <ContactForm />
+//       </div>
+//     </>
+//   );
+// }
+"use client";
 
-Love,
+import Hero from "@/components/about/Hero";
+import ContactForm from "@/components/ContactForm";
 
-Samantha`;
-
-export async function generateMetadata() {
-  return {
-    title: "About Me",
-    description: "Learn more about Samantha and her travel adventures",
-    openGraph: {
-      title: "About Me",
-      description: "Learn more about Samantha and her travel adventures",
-      images: [
-        signOgImageUrl({
-          title: "Samantha",
-          label: "About Me",
-          brand: config.blog.name,
-        }),
-      ],
-    },
+// AboutUs.jsx (main component)
+export default function AboutUs() {
+  const heroContent = {
+    quote: "A well-designed kitchen is more than a place to cook—it's the heart of the home. Our mission is to bring style, functionality, and comfort to every space we remodel.",
+    author: "Gabriel Lulu",
+    role: "Founder & Lead Designer",
+    companyLogo: "/api/placeholder/120/48",
+    companyValues: "Our Commitment to Excellence",
+    missionTitle: "Transforming Kitchens, Elevating Homes",
+    description: [
+      "At Modern Kitchen's Miami, we specialize in modern kitchen remodeling, combining innovative designs with high-quality materials. Our goal is to create stunning, functional kitchens tailored to our clients' lifestyles.",
+      "From contemporary minimalist designs to timeless elegance, our team ensures every detail is crafted to perfection. We work with premium countertops, cabinetry, and smart appliances to enhance both aesthetics and efficiency.",
+      "With years of experience in home renovation, we take pride in our craftsmanship, attention to detail, and customer satisfaction. Whether you're looking for a sleek new layout or a complete kitchen transformation, we're here to bring your vision to life."
+    ]
   };
-}
 
-const Page = async () => {
   return (
-    <div className="container mx-auto px-5">
-      {/* <Header /> */}
-      <div className="prose lg:prose-lg dark:prose-invert m-auto mt-20 mb-10 blog-content">
-        <Markdown>{content}</Markdown>
+    <>
+      <div className="py-24 sm:py-32">
+        <div className="mx-auto w-5/6 px-6 lg:px-8">
+          <Hero {...heroContent} />
+        </div>
       </div>
-      {/* <Footer /> */}
-    </div>
-  );
-};
 
-export default Page;
+      <div className="pt-36 w-5/6 flex flex-col mx-auto">
+        <ContactForm />
+      </div>
+    </>
+  );
+}

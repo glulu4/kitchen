@@ -55,9 +55,9 @@ import Image from 'next/image';
 import SecondaryText from './SecondaryText';
 
 const services = [
-    {title: "Kitchens", image: "/images/mdrn-kitchen.png", link: "/kitchen"},
-    {title: "Closets", image: "/images/mdrn-kitchen.png", link: "/closet"},
-    {title: "TV Wall Units", image: "/images/mdrn-dining-room.webp", link: "/tv-wall"},
+    {title: "Kitchens", image: "/images/modern-kitchen10.jpeg", link: "/kitchen"},
+    {title: "Closets", image: "/images/closet1.jpeg", link: "/closet"},
+    {title: "TV Wall Units", image: "/images/tv-wall1.jpeg", link: "/tv-wall"},
 ];
 
 const ServicesSection = () => {
