@@ -9,7 +9,7 @@ const Page = () => {
 
 
   return (
-    <div className="mx-auto mb-10 border">
+    <div className="mx-auto mb-10 ">
 
       {/* Hero Section */}
       <div className="relative flex flex-col items-center justify-center h-[80vh] bg-gray-100 text-center pb-10">
@@ -27,7 +27,7 @@ const Page = () => {
       </div>
       <div className="pt-36 m-4">
         <ServicesSection />
-        <div className="pt-36">
+        <div className="pt-36 mb-16">
           <ContactForm />
 
         </div>

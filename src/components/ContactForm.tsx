@@ -1,11 +1,11 @@
+"use client"
 import React, {useState} from 'react';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
+        name: '',
         email: '',
-        subscribe: false,
+        message: '',  // Add this line
     });
 
     const handleChange = (e: any) => {
@@ -16,12 +16,35 @@ const ContactForm = () => {
         });
     };
 
-    const handleSubmit = (e:any) => {
-        e.preventDefault();
-        // Handle form submission here (e.g., send data to API or display message)
-        console.log(formData);
-    };
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({formData}),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Something went wrong');
+            }
+
+            alert('Message sent successfully!');
+            setFormData({name: '', email: '', message: ''}); // Reset form
+        } catch (error) {
+            alert(error instanceof Error ? error.message : 'Failed to send message');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
     return (
         <div className='mx-20'>
             <h2 className="text-5xl font-bold text-left mb-12">Contact Us</h2>
@@ -29,12 +52,12 @@ const ContactForm = () => {
                 <div className="flex gap-4">
                     <div className="flex-1">
                         <label className="block font-medium text-lg text-gray-700 mb-1">
-                            First name *
+                            Full name *
                         </label>
                         <input
                             type="text"
-                            name="firstName"
-                            value={formData.firstName}
+                            name="name"
+                            value={formData.name}
                             onChange={handleChange}
                             required
                             className="w-full border-b border-gray-400 bg-inherit focus:outline-none focus:border-black"
@@ -42,12 +65,12 @@ const ContactForm = () => {
                     </div>
                     <div className="flex-1">
                         <label className="block text-lg font-medium text-gray-700 mb-1">
-                            Last name *
+                            Email *
                         </label>
                         <input
-                            type="text"
-                            name="lastName"
-                            value={formData.lastName}
+                            type="email"
+                            name="email"
+                            value={formData.email}
                             onChange={handleChange}
                             required
                             className="w-full border-b border-gray-400 bg-inherit focus:outline-none focus:border-black"
@@ -56,35 +79,27 @@ const ContactForm = () => {
                 </div>
                 <div>
                     <label className="block text-lg font-medium text-gray-700 mb-1">
-                        Email Address *
+                        Message *
                     </label>
                     <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
+                        type="message"
+                        name="message"
+                        value={formData.message}
                         onChange={handleChange}
                         required
                         className="w-full border-b border-gray-400 focus:outline-none bg-inherit focus:border-black"
                     />
                 </div>
-                <div className="flex items-center">
-                    <input
-                        type="checkbox"
-                        name="subscribe"
-                        checked={formData.subscribe}
-                        onChange={handleChange}
-                        className="mr-2 border-gray-400"
-                    />
-                    <label className="text-gray-700 text-sm">
-                        Yes, subscribe me to your newsletter.
-                    </label>
-                </div>
+
+
+
                 <div className="flex justify-center">
                     <button
                         type="submit"
-                        className="px-6 py-2 bg-black text-white font-semibold rounded hover:bg-gray-800"
+                        disabled={isSubmitting}
+                        className="px-6 py-2 bg-black text-white font-semibold rounded hover:bg-gray-800 disabled:opacity-50"
                     >
-                        Submit
+                        {isSubmitting ? 'Sending...' : 'Submit'}
                     </button>
                 </div>
             </form>

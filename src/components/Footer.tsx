@@ -8,34 +8,41 @@ import { Button } from "./ui/button";
 
 export const Footer: FunctionComponent = () => {
   return (
-    <section className="mt-8 md:mt-16 mb-12 px-4">
-      <div className="flex items-center justify-between">
-        <div className="text-sm text-muted-foreground">
+    <footer className="w-full bg-neutral-400 py-4 ">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-start px-4 h-28">
+        <div className="text-md font-semibold text-white text-muted-foreground">
           © {config.blog.copyright} {new Date().getFullYear()}
         </div>
-        <div className="text-xs text-muted-foreground hidden lg:block">
+        <div className="text-sm text-white text-muted-foreground hidden lg:block">
           <Link
             href={`https://wisp.blog/?utm_source=next-js-template&utm_medium=web&utm_campaign=${config.baseUrl}`}
           >
             {/* Blog powered by wisp */}
           </Link>
         </div>
-        {/* <div>
-          <Link href="/rss">
-            <Button variant="ghost" className="p-2">
-              <Rss className="w-4 h-4" />
-            </Button>
-          </Link>
-          <DarkModeToggle />
-        </div> */}
       </div>
-      <div className="text-xs text-muted-foreground lg:hidden">
-        <Link
-          href={`https://wisp.blog/?utm_source=next-js-template&utm_medium=web&utm_campaign=${config.baseUrl}`}
-        >
+    </footer>
+    // <section className="mt-8 md:mt-16 mb-12 px-4 bg-neutral-300">
+    //   <div className="flex items-center justify-between ">
+    //     <div className="text-sm text-muted-foreground">
+    //       © {config.blog.copyright} {new Date().getFullYear()}
+    //     </div>
+    //     <div className="text-xs text-muted-foreground hidden lg:block">
+    //       <Link
+    //         href={`https://wisp.blog/?utm_source=next-js-template&utm_medium=web&utm_campaign=${config.baseUrl}`}
+    //       >
+    //         {/* Blog powered by wisp */}
+    //       </Link>
+    //     </div>
+
+    //   </div>
+    //   <div className="text-xs text-muted-foreground lg:hidden">
+    //     <Link
+    //       href={`https://wisp.blog/?utm_source=next-js-template&utm_medium=web&utm_campaign=${config.baseUrl}`}
+    //     >
           
-        </Link>
-      </div>
-    </section>
+    //     </Link>
+    //   </div>
+    // </section>
   );
 };
